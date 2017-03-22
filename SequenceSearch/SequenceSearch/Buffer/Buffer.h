@@ -1,9 +1,9 @@
 #ifndef SEQUENCE_SEARCH_BUFFER_H
 #define SEQUENCE_SEARCH_BUFFER_H
 
-#include <istream>
+#include <deque>
 
-#include <queue>
+#include <istream>
 
 #include <stdexcept>
 
@@ -12,7 +12,7 @@ namespace SequenceSearch
 	template <typename T>
 	class Buffer
 	{
-		std::queue <T> data;
+		std::deque <T> data;
 		long position;
 		const unsigned int maxSize;
 	public:
@@ -23,6 +23,7 @@ namespace SequenceSearch
 				throw std::invalid_argument("Buffer object initialized with 0 as maximum size."
 					" Cannot use empty buffer for reading");
 			}
+			data.resize(bufferMaxSize);
 		}
 
 		const std::deque<T>& getData() const

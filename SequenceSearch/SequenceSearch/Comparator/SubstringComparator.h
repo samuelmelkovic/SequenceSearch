@@ -2,12 +2,13 @@
 #define SEQUENCE_SEARCH_SUBSTRING_COMPARATOR_H
 
 #include ".\PatternComparator.h"
+#include "..\Buffer\SubstringBuffer.h"
 #include "..\Config\config.h"
 
 namespace SequenceSearch
 {
 	template <typename T>
-	class SubstringComparator : public PatternComparator<T>
+	class SubstringComparator : public PatternComparator<T, std::deque<T> >
 	{
 		std::vector<T> pattern;
 	public:
@@ -16,7 +17,7 @@ namespace SequenceSearch
 	
 		SubstringComparator(const std::vector<T> & comparedPattern) : pattern(comparedPattern) {}
 
-		bool compare(const Buffer<T>& buffer) const override;
+		bool compare(const Buffer<T,std::deque<T> >& buffer) const override;
 
 		const std::vector<T> getPattern() const override
 		{

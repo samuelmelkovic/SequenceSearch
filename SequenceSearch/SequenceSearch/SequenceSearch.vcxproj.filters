@@ -13,30 +13,51 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Comparator">
+      <UniqueIdentifier>{c32da161-5b3d-4205-b064-c43844bd7f75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Buffer">
+      <UniqueIdentifier>{0ef48299-04ae-4d9c-bf66-e14594402d39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Comparator">
+      <UniqueIdentifier>{ea8f516e-75b4-4101-be12-066c63876199}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Buffer">
+      <UniqueIdentifier>{d1c892a3-56a1-481e-9a48-d6b592a91205}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Config">
+      <UniqueIdentifier>{03e3606e-a0c4-4659-b061-5decfe09e5d8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Buffer\Buffer.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Buffer\SubstringBuffer.cpp">
+      <Filter>Source Files\Buffer</Filter>
     </ClCompile>
     <ClCompile Include="Comparator\SubstringComparator.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Comparator</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Buffer\Buffer.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffer\SubstringBuffer.h">
+      <Filter>Header Files\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffer\SubstringAttributes.h">
+      <Filter>Header Files\Buffer</Filter>
     </ClInclude>
     <ClInclude Include="Comparator\PatternComparator.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Comparator</Filter>
     </ClInclude>
     <ClInclude Include="Comparator\SubstringComparator.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Comparator</Filter>
     </ClInclude>
     <ClInclude Include="Config\config.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Config</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

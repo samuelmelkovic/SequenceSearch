@@ -7,13 +7,13 @@
 
 namespace SequenceSearch
 {
-	template <typename T>
+	template <typename Type, typename Container>
 	class PatternComparator
 	{
 	public:
-		virtual bool compare(const Buffer<T>& buffer) const = 0;
-		virtual const std::vector<T> getPattern() const = 0;
-		bool operator()(const Buffer<T>& buffer)
+		virtual bool compare(const Buffer<Type,Container>& buffer) const = 0;
+		virtual const std::vector<Type> getPattern() const = 0;
+		bool operator()(const Buffer<Type,Container>& buffer)
 		{
 			return compare(buffer);
 		}

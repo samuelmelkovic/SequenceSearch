@@ -110,12 +110,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Buffer\Buffer.cpp" />
+    <ClCompile Include="Buffer\SubstringBuffer.cpp" />
     <ClCompile Include="Comparator\SubstringComparator.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Buffer\Buffer.h" />
+    <ClInclude Include="Buffer\SubstringAttributes.h" />
+    <ClInclude Include="Buffer\SubstringBuffer.h" />
     <ClInclude Include="Comparator\PatternComparator.h" />
     <ClInclude Include="Comparator\SubstringComparator.h" />
     <ClInclude Include="Config\config.h" />

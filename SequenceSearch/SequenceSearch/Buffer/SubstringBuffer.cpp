@@ -1,7 +1,7 @@
-#include ".\Buffer.h"
+#include ".\SubstringBuffer.h"
 
 template <typename T>
-std::istream & SequenceSearch::Buffer<T>::readFrom(std::istream & input)
+std::istream & SequenceSearch::SubstringBuffer<T>::readFrom(std::istream & input)
 {
 	if (data.size() == maxSize)
 	{

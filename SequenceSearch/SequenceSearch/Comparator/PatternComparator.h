@@ -12,7 +12,7 @@ namespace SequenceSearch
 	{
 	public:
 		virtual bool compare(const Buffer<Type,Container>& buffer) const = 0;
-		virtual const std::vector<Type> getPattern() const = 0;
+		virtual const std::vector<Type> getPattern() const noexcept = 0;
 		bool operator()(const Buffer<Type,Container>& buffer)
 		{
 			return compare(buffer);

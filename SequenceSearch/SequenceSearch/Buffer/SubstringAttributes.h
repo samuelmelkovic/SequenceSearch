@@ -8,11 +8,12 @@ namespace SequenceSearch
 	class SubstringAttributes
 	{
 	public:
-		SubstringAttributes(unsigned int _prefixLength, unsigned int suffixLength) : 
-			prefixLength(_prefixLength), suffixLength(suffixLength) {}
+		SubstringAttributes(unsigned int _prefixLength, unsigned int _suffixLength, unsigned int _substringLength) : 
+			prefixLength(_prefixLength), suffixLength(_suffixLength), substringLength(_substringLength) {}
 		
 		const unsigned int prefixLength;
 		const unsigned int suffixLength;
+		const unsigned int substringLength;
 	};
 }
 

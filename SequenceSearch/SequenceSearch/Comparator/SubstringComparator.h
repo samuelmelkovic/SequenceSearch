@@ -11,17 +11,25 @@ namespace SequenceSearch
 	class SubstringComparator : public PatternComparator<T, std::deque<T> >
 	{
 		std::vector<T> pattern;
+
+		SubstringAttributes ranges;
+
 	public:
-		static const unsigned int k_prefix_length = PREFIX_LENGTH;
-		static const unsigned int k_suffix_length = SUFFIX_LENGTH;
-	
-		SubstringComparator(const std::vector<T> & comparedPattern) : pattern(comparedPattern) {}
+		SubstringComparator(
+			const std::vector<T> & comparedPattern,
+			const SubstringAttributes & substringAttributes
+		) : pattern(comparedPattern), ranges(substringAttributes) {}
 
 		bool compare(const Buffer<T,std::deque<T> >& buffer) const override;
 
 		const std::vector<T> getPattern() const override
 		{
 			return pattern;
+		}
+
+		const SubstringAttributes & getRanges() const noexcept
+		{
+			return ranges;
 		}
 	};
 }

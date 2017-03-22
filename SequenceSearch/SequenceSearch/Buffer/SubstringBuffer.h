@@ -3,11 +3,13 @@
 
 #include ".\Buffer.h"
 
+#include ".\SubstringAttributes.h"
+
+#include "..\Exceptions\ObjectNotReadyException.h"
+
 #include <deque>
 
 #include <istream>
-
-#include <stdexcept>
 
 namespace SequenceSearch
 {
@@ -16,24 +18,23 @@ namespace SequenceSearch
 	{
 		std::deque <T> data;
 		long position;
-		const unsigned int maxSize;
+		static unsigned int bufferMaxSize = 0;
 	public:
-		SubstringBuffer(unsigned int bufferMaxSize) : maxSize(bufferMaxSize)
+		SubstringBuffer()
 		{
 			if (bufferMaxSize == 0)
 			{
-				throw std::invalid_argument("Buffer object initialized with 0 as maximum size."
-					" Cannot use empty buffer for reading");
+				throw new ObjectNotReadyException;
 			}
 			data.resize(bufferMaxSize);
 		}
 
-		const std::deque<T>& getData() const
+		const std::deque<T>& getData() const noexcept
 		{
 			return data;
 		}
 
-		long getPosition() const
+		long getPosition() const noexcept
 		{
 			return position;
 		}
